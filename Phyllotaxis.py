@@ -17,7 +17,7 @@ def draw():
             y = r * math.sin(a) + height / 2
 
             color = lambda: random.randint(0, 255)
-            canvas.create_oval(x, y, x + 6, y + 6, fill='#%02X%02X%02X' % (color(),color(),color()))
+            canvas.create_oval(x, y, x + 6, y + 6, fill='#%02X%02X%02X' % (color(),color(),color()), width=0)
             canvas.update()
             n += 1
 
