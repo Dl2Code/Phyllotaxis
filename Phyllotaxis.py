@@ -1,6 +1,6 @@
 from tkinter import *
-import random
-import math
+from random import randint, uniform
+from math import radians, sqrt, cos, sin
 
 
 def draw():
@@ -8,15 +8,15 @@ def draw():
     try:
 
         n, c = 0, 5
-        angle = float("{:.3f}".format(random.uniform(130.000, 150.000)))
+        angle = float("{:.3f}".format(uniform(100.000, 151.000)))
         label_text.set("Angle: " + str(angle) + "°")
         for _ in range(2500):
-            a = n * math.radians(angle)
-            r = c * math.sqrt(n)
-            x = r * math.cos(a) + width / 2
-            y = r * math.sin(a) + height / 2
+            a = n * radians(angle)
+            r = c * sqrt(n)
+            x = r * cos(a) + width / 2
+            y = r * sin(a) + height / 2
 
-            color = lambda: random.randint(0, 255)
+            color = lambda: randint(0, 255)
             canvas.create_oval(x, y, x + 6, y + 6, fill='#%02X%02X%02X' % (color(),color(),color()), width=0)
             canvas.update()
             n += 1
@@ -43,6 +43,6 @@ Label(
     textvariable=label_text,
     foreground="#FFFFFF",
     background="#000000",
-    font=("Helvetica", 9)
-).place(x=width - width, y=height - height)
+    font=("Helvetica", 10)
+).place(x=width - width + 3, y=height - height + 3)
 draw()
