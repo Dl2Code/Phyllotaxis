@@ -10,7 +10,7 @@ def draw():
         n, c = 0, 5
         angle = float("{:.3f}".format(random.uniform(130.000, 150.000)))
         label_text.set("Angle: " + str(angle) + "°")
-        for i in range(2500):
+        for _ in range(2500):
             a = n * math.radians(angle)
             r = c * math.sqrt(n)
             x = r * math.cos(a) + width / 2
