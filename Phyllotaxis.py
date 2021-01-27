@@ -44,5 +44,5 @@ Label(
     foreground="#FFFFFF",
     background="#000000",
     font=("Helvetica", 10)
-).place(x=width - width + 3, y=height - height + 3)
+).place(x=3, y=4)
 draw()
