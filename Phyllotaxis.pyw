@@ -10,8 +10,8 @@ def draw():
     for i in range(len(rgb)):
         for _ in range(limit):
             if rgb[i] != limit:
-                color.append("#" + "".join(["0{0:x}".format(j) if j < 16 else "{0:x}".format(j) for j in [int(k) for k in rgb]]))
                 rgb[i] += 1
+                color.append("#" + "".join(["0{0:x}".format(j) if j < 16 else "{0:x}".format(j) for j in [int(k) for k in rgb]]))
 
     angle = float("{:.3f}".format(uniform(1.000, 1000.000)))
     label_text.set("Angle: " + str(angle) + "°")
