@@ -1,5 +1,5 @@
 from math import radians, sqrt, cos, sin, floor
-from random import randint, uniform, choice
+from random import randint, uniform
 from tkinter import *
 
 
